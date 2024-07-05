@@ -2,7 +2,8 @@
 $(call inherit-product-if-exists, vendor/extra/product.mk)
 # SystemDefaults
 $(call inherit-product, vendor/lineage/SystemDefaults/defaults_common.mk)
-
+# Optimisation
+$(call inherit-product, vendor/lineage/SystemDefaults/optimisation.mk)
 # Allow vendor prebuilt repos to exclude themselves from bp scanning
 -include $(sort $(wildcard vendor/*/*/exclude-bp.mk))
 
@@ -264,6 +265,9 @@ PRODUCT_EXTRA_RECOVERY_KEYS += \
 include vendor/lineage/config/version.mk
 
 -include vendor/lineage-priv/keys/keys.mk
+
+# Optimisation
+$(call inherit-product, vendor/aosp/config/common/optimisation.mk)
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 -include vendor/lineage/config/partner_gms.mk
