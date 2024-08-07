@@ -1,5 +1,30 @@
+# ============================================================================
+# VENDOR CONFIGURATION OVERRIDES
+# ============================================================================
 # Allow vendor/extra to override any property by setting it first
 $(call inherit-product-if-exists, vendor/extra/product.mk)
+
+# ============================================================================
+# SYSTEM DEFAULTS
+# ============================================================================
+# Core system defaults and configurations
+$(call inherit-product, vendor/lineage/SystemDefaults/defaults_common.mk)
+# System optimization settings
+$(call inherit-product, vendor/lineage/SystemDefaults/optimisation.mk)
+
+# ============================================================================
+# OPTIONAL FEATURES (COMMENTED OUT)
+# ============================================================================
+# MicroG services for Google Play Services alternative
+# $(call inherit-product-if-exists, vendor/MICROG/microg.mk)
+# Vendor extras
+# $(call inherit-product-if-exists, vendor/custom/config.mk)
+# Audio enhancement - ViPER4AndroidFX
+# $(call inherit-product-if-exists, packages/apps/ViPER4AndroidFX/config.mk)
+# Vendor Prebuilt system applications
+# $(call inherit-product-if-exists, vendor/prebuilt/config.mk)
+# Vendor Configarations
+# $(call inherit-product-if-exists, vendor/configaration/config.mk)
 
 # Allow vendor prebuilt repos to exclude themselves from bp scanning
 -include $(sort $(wildcard vendor/*/*/exclude-bp.mk))
@@ -130,21 +155,13 @@ PRODUCT_PACKAGES += \
     build-manifest
 
 # Lineage packages
-ifeq ($(PRODUCT_IS_ATV),)
-PRODUCT_PACKAGES += \
-    ExactCalculator \
-    Jelly
-endif
-
 ifeq ($(PRODUCT_IS_AUTOMOTIVE),)
 PRODUCT_PACKAGES += \
-    LineageParts \
-    LineageSetupWizard
+    LineageParts
 endif
 
 PRODUCT_PACKAGES += \
-    LineageSettingsProvider \
-    Updater
+    LineageSettingsProvider
 
 PRODUCT_COPY_FILES += \
     vendor/lineage/prebuilt/common/etc/init/init.lineage-updater.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.lineage-updater.rc
@@ -153,16 +170,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     SimpleDeviceConfig \
     SimpleSettingsConfig
-
-# Extra tools in Lineage
-PRODUCT_PACKAGES += \
-    bash \
-    curl \
-    getcap \
-    htop \
-    nano \
-    setcap \
-    vim
 
 PRODUCT_PACKAGES += \
     nano_recovery
@@ -201,10 +208,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     vendor/lineage/prebuilt/common/etc/init/init.openssh.rc:$(TARGET_COPY_OUT_PRODUCT)/etc/init/init.openssh.rc
-
-# rsync
-PRODUCT_PACKAGES += \
-    rsync
 
 # Storage manager
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
