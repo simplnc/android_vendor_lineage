@@ -921,3 +921,12 @@ function fixup_common_out_dir() {
         mkdir -p ${common_out_dir}
     fi
 }
+
+export SKIP_ABI_CHECKS=true
+export BUILD_BROKEN_DISABLE_BAZEL=
+
+#SCUDO
+export PRODUCT_USE_SCUDO=true
+
+export BUILD_BROKEN_DUP_RULES=true
+export RELAX_USES_LIBRARY_CHECK=true
