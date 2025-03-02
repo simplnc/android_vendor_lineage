@@ -5,7 +5,9 @@ $(call inherit-product, vendor/lineage/SystemDefaults/defaults_common.mk)
 # Optimisation
 $(call inherit-product, vendor/lineage/SystemDefaults/optimisation.mk)
 # Audio upgrade
-#$(call inherit-product-if-exists, packages/apps/ViPER4AndroidFX/config.mk)
+# $(call inherit-product-if-exists, packages/apps/ViPER4AndroidFX/config.mk)
+# $(call inherit-product-if-exists, vendor/MICROG/microg.mk)
+
 
 # Allow vendor prebuilt repos to exclude themselves from bp scanning
 -include $(sort $(wildcard vendor/*/*/exclude-bp.mk))
@@ -136,11 +138,9 @@ PRODUCT_PACKAGES += \
     build-manifest
 
 # Lineage packages
-
 ifeq ($(PRODUCT_IS_AUTOMOTIVE),)
 PRODUCT_PACKAGES += \
-    LineageParts \
-    LineageSetupWizard
+    LineageParts
 endif
 
 PRODUCT_PACKAGES += \
