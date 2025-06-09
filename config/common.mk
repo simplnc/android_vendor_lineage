@@ -358,7 +358,6 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.min.fling_velocity=160 \
     ro.max.fling_velocity=20000 \
     ro.min_pointer_dur=8 \
-    ro.max.fling_velocity=12000 \
     windowsmgr.max_events_per_sec=150 \
     persist.sys.scrollingcache=3 \
     touch.pressure.scale=0.001 \
