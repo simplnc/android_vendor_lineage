@@ -1,8 +1,26 @@
-# Allow vendor/extra to override any property by setting it first
+# =====================================================
+# Basename Common Configuration
+# =====================================================
+# This configuration file serves as the central hub for our system properties,
+# package definitions, and performance optimizations. It defines core system behavior,
+# security policies, and advanced optimizations for enhanced user experience.
+
+# Override Mechanism
+# Allows vendor-specific customizations while maintaining base functionality
 $(call inherit-product-if-exists, vendor/extra/product.mk)
 
+# =====================================================
+# Core System Identity & Services Configuration
+# =====================================================
+
+# Product Branding
+# Defines the base product identity used throughout the system
 PRODUCT_BRAND ?= BASENAME
 
+# Google Services Integration
+# Configures Google Mobile Services (GMS) client identification
+# This enables proper integration with Google services while maintaining
+# device-specific customizations when required
 ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.com.google.clientidbase=android-google
@@ -11,6 +29,9 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.com.google.clientidbase=$(PRODUCT_GMS_CLIENTID_BASE)
 endif
 
+# Android TV Platform Configuration
+# Special configurations for Android TV devices
+# Enables proper integration with TV-specific features and services
 ifeq ($(PRODUCT_IS_ATV),true)
 ifeq ($(PRODUCT_ATV_CLIENTID_BASE),)
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
@@ -21,8 +42,16 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 endif
 endif
 
+# =====================================================
+# Security Architecture & Debug Infrastructure
+# =====================================================
+
+# ADB (Android Debug Bridge) Security Framework
+# Implements a tiered security model for debugging access:
+# - Engineering builds: Unrestricted access for development
+# - User builds: Enforced security for production devices
+# - Configurable override for testing scenarios
 ifeq ($(TARGET_BUILD_VARIANT),eng)
-# Disable ADB authentication
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.adb.secure=0
 else
 ifdef WITH_ADB_INSECURE
@@ -134,8 +163,7 @@ PRODUCT_PACKAGES += \
 # Lineage packages
 ifeq ($(PRODUCT_IS_ATV),)
 PRODUCT_PACKAGES += \
-    ExactCalculator \
-    Jelly
+    ExactCalculator 
 endif
 
 ifeq ($(PRODUCT_IS_AUTOMOTIVE),)
