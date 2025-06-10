@@ -8,7 +8,10 @@
 # Override Mechanism
 # Allows vendor-specific customizations while maintaining base functionality
 $(call inherit-product-if-exists, vendor/extra/product.mk)
-
+# 
+# $(call inherit-product-if-exists, vendor/lineage/config/microg.mk)
+# $(call inherit-product-if-exists, vendor/lineage/config/branding.mk)
+# $(call inherit-product-if-exists, vendor/lineage/config/custom.mk)
 # =====================================================
 # Core System Identity & Services Configuration
 # =====================================================
@@ -161,10 +164,6 @@ PRODUCT_PACKAGES += \
     build-manifest
 
 # Lineage packages
-ifeq ($(PRODUCT_IS_ATV),)
-PRODUCT_PACKAGES += \
-    ExactCalculator 
-endif
 
 ifeq ($(PRODUCT_IS_AUTOMOTIVE),)
 PRODUCT_PACKAGES += \
@@ -237,7 +236,8 @@ PRODUCT_PACKAGES += \
 
 # Storage manager
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.storage_manager.enabled=true
+    ro.storage_manager.enabled=false
+# Disable storage manager by default to avoid issues with some devices
 
 # These packages are excluded from user builds
 PRODUCT_PACKAGES_DEBUG += \
@@ -432,12 +432,27 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     power.saving.mode=1 \
     ro.ril.disable.power.collapse=0 \
     pm.sleep_mode=1 \
+    ro.config.hw_cpu_freq_boost=1 \
+    video.accelerate.hw=1 \
+    persist.sys.purgeable_assets=1 \
+    ro.config.hw_quickpoweron=true \
+    debug.sf.nobootanimation=1 \
+    ro.opa.eligible_device=true \
     ro.config.hw_fast_dormancy=1
          
-
+# =====================================================
+# Versioning, Keys & Google Metadata
 include vendor/lineage/config/version.mk
-
+# Include the vendor-specific keys for signing
 -include vendor/lineage-priv/keys/keys.mk
-
+# Include the vendor-specific for signing
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
+# Include the vendor-Minimal Google configuration
 -include vendor/lineage/config/partner_gms.mk
+
+# =====================================================
+# Additional Product Configuration
+# Include additional product configuration files
+
+# include vendor/lawnchair/lawnchair.mk
+# include vendor/lineage/config/preSystem/inbuilt.mk
