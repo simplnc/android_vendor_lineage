@@ -8,7 +8,6 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     dalvik.vm.dex2oat-threads=8 \
     dalvik.vm.dex2oat-cpu-set=0,1,2,3,4,5,6,7 \
     dalvik.vm.package-startup-phase=3 \
-    dalvik.vm.dexopt.secondary=true \
     persist.device_config.runtime_native.usap_pool_enabled=true
 
 # Advanced Memory Management
@@ -65,7 +64,6 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 # System Stability Enhancements
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     debug.sf.disable_client_composition_cache=1 \
-    debug.sf.enable_transaction_tracing=false \
     debug.sf.enable_gl_backpressure=1 \
     debug.hwui.renderer=skiagl \
     debug.hwui.target_cpu_time_percent=30 \
