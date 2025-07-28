@@ -10,9 +10,7 @@ $(call inherit-product-if-exists, external/google-fonts/rubik/fonts.mk)
 # Apps
 PRODUCT_PACKAGES += \
     Camelot \
-    Etar \
     Profiles \
-    Recorder \
     Seedvault \
     Twelve
 
