@@ -33,3 +33,10 @@ TARGET_SYSTEM_PROP += \
 # Wallpapers
 # PRODUCT_PACKAGES += \
 # BaseRomWallpaperStub \
+
+# Weather
+# PRODUCT_PACKAGES += \
+# OmniJaws \
+    
+
+
