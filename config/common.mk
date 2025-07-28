@@ -4,6 +4,9 @@ $(call inherit-product-if-exists, vendor/extra/product.mk)
 $(call inherit-product, vendor/lineage/SystemDefaults/defaults_common.mk)
 # Optimisation
 $(call inherit-product, vendor/lineage/SystemDefaults/optimisation.mk)
+# Audio upgrade
+#$(call inherit-product-if-exists, packages/apps/ViPER4AndroidFX/config.mk)
+
 # Allow vendor prebuilt repos to exclude themselves from bp scanning
 -include $(sort $(wildcard vendor/*/*/exclude-bp.mk))
 
