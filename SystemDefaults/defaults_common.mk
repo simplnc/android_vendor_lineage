@@ -28,3 +28,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 TARGET_SYSTEM_PROP += \
     vendor/lineage/SystemDefaults/defaults_common.prop
+
+
+# Wallpapers
+# PRODUCT_PACKAGES += \
+# BaseRomWallpaperStub \
