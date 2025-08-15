@@ -17,4 +17,6 @@
 <resources>
     <bool name="flag_conversations">true</bool>
     <bool name="flag_charging_ripple">true</bool>
+    <bool name="flag_notification_snooze">true</bool>
+    <bool name="flag_combined_qs_headers">true</bool>
 </resources>
