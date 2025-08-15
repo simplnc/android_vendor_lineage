@@ -42,4 +42,13 @@
 
     <!-- Show app hibernation settings section if supported -->
     <bool name="config_show_app_hibernation_settings">true</bool>
+
+    <!-- Show per-app language settings entry if supported -->
+    <bool name="config_per_app_language_enabled">true</bool>
+
+    <!-- Show emergency gesture settings if available -->
+    <bool name="config_show_emergency_gesture_settings">true</bool>
+
+    <!-- Surface scheduled power on/off if the device implementation supports it -->
+    <bool name="config_show_scheduled_power_on_off">true</bool>
 </resources>
