@@ -38,7 +38,7 @@ $(call inherit-product-if-exists, packages/apps/WallpaperPicker2/Android.mk)
 
 # Optional feature hubs from other ROMs
 # $(call inherit-product-if-exists, packages/apps/Evolver/evolver.mk)
-$(call inherit-product-if-exists, packages/apps/Extensions/extensions.mk)
+# $(call inherit-product-if-exists, packages/apps/Extensions/extensions.mk)
 
 # Optional vendor add-ons and extended ROM configs (pulled only if present)
 $(call inherit-product-if-exists, vendor/addons/config.mk)
