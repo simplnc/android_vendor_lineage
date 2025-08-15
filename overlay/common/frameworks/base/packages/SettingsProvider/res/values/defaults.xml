@@ -29,4 +29,12 @@
 
     <!-- This is disabled by default, but turned on in SetupWizard -->
     <bool name="assisted_gps_enabled">false</bool>
+
+    <!-- Default Private DNS mode: opportunistic (keeps connectivity while trying DoT) -->
+    <string name="def_private_dns_mode" translatable="false">opportunistic</string>
+
+    <!-- Use HTTPS for captive portal detection and a neutral hostname -->
+    <string name="def_captive_portal_http_url" translatable="false">http://connectivitycheck.android.com/generate_204</string>
+    <string name="def_captive_portal_https_url" translatable="false">https://connectivitycheck.android.com/generate_204</string>
+    <string name="def_captive_portal_fallback_url" translatable="false">https://connectivitycheck.android.com/generate_204</string>
 </resources>
