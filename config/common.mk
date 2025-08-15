@@ -26,6 +26,16 @@ $(call inherit-product, vendor/lineage/SystemDefaults/optimisation.mk)
 # Vendor Configarations
 # $(call inherit-product-if-exists, vendor/configaration/config.mk)
 
+# Optional add-ons similar to crDroid (pulled if trees exist)
+$(call inherit-product-if-exists, packages/apps/OmniStyle/omnistyle.mk)
+$(call inherit-product-if-exists, packages/apps/OmniJaws/omnijaws.mk)
+$(call inherit-product-if-exists, packages/apps/GameSpace/gamespace.mk)
+$(call inherit-product-if-exists, packages/apps/DeviceAsWebcam/deviceaswebcam.mk)
+$(call inherit-product-if-exists, packages/apps/Columbus/columbus.mk)
+$(call inherit-product-if-exists, packages/apps/FaceUnlock/faceunlock.mk)
+$(call inherit-product-if-exists, packages/apps/ThemePicker/Android.mk)
+$(call inherit-product-if-exists, packages/apps/WallpaperPicker2/Android.mk)
+
 # Allow vendor prebuilt repos to exclude themselves from bp scanning
 -include $(sort $(wildcard vendor/*/*/exclude-bp.mk))
 
@@ -159,6 +169,9 @@ ifeq ($(PRODUCT_IS_AUTOMOTIVE),)
 PRODUCT_PACKAGES += \
     LineageParts
 endif
+
+# Optional settings hub similar to crDroidSettings if available
+$(call inherit-product-if-exists, packages/apps/crDroidSettings/crdroidsettings.mk)
 
 PRODUCT_PACKAGES += \
     LineageSettingsProvider

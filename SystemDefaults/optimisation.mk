@@ -50,3 +50,14 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
 
 # Inherit art options
 include vendor/lineage/SystemDefaults/art.mk
+
+# UI rendering and input responsiveness tweaks
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.launcher.blur.appLaunch=false \
+    debug.hwui.skip_empty_damage=true \
+    debug.renderengine.backend=skiaglthreaded
+
+# Game mode hints (used by some game optimization apps)
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.gfx.driver.1=com.qualcomm.qti.gpudrivers \
+    ro.vendor.game_opt.enable=true

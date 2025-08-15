@@ -40,8 +40,11 @@ TARGET_SYSTEM_PROP += \
 # BaseRomWallpaperStub \
 
 # Weather
-# PRODUCT_PACKAGES += \
-# OmniJaws \
+# Enable OmniJaws when AVAILABLE_OMNIJAWS is set by the product
+ifeq ($(AVAILABLE_OMNIJAWS),true)
+PRODUCT_PACKAGES += \
+    OmniJaws
+endif
     
 
 
