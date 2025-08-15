@@ -121,3 +121,9 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.vendor.qti.core_ctl_boost_duration=5000 \
     ro.vendor.qti.core_ctl_boost_freq=0:1804800,1:1804800,2:1804800,3:1804800,4:1804800,5:1804800,6:1804800,7:1804800
 
+# Built-in screen recorder and power menu preferences
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    sys.trichrome_flag=0 \
+    systemui.power_menu_advanced=true \
+    debug.ffmpeg.codec2.enabled=true
+

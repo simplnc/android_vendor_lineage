@@ -36,6 +36,10 @@ $(call inherit-product-if-exists, packages/apps/FaceUnlock/faceunlock.mk)
 $(call inherit-product-if-exists, packages/apps/ThemePicker/Android.mk)
 $(call inherit-product-if-exists, packages/apps/WallpaperPicker2/Android.mk)
 
+# Optional feature hubs from other ROMs
+$(call inherit-product-if-exists, packages/apps/Evolver/evolver.mk)
+$(call inherit-product-if-exists, packages/apps/Extensions/extensions.mk)
+
 # Allow vendor prebuilt repos to exclude themselves from bp scanning
 -include $(sort $(wildcard vendor/*/*/exclude-bp.mk))
 

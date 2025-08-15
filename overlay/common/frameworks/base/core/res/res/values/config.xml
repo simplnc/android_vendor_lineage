@@ -91,6 +91,12 @@
     <!-- Default to show status bar ticker (if supported by SystemUI) -->
     <bool name="config_showNotificationTicker">true</bool>
 
+    <!-- Show 4G icon instead of LTE when carrier reports LTE -->
+    <bool name="config_show4GForLTE">true</bool>
+
+    <!-- Indicate ambient display (doze) is available -->
+    <bool name="config_ambientDisplayAvailable">true</bool>
+
     <!-- Whether or not we should show the option to show battery percentage -->
     <bool name="config_battery_percentage_setting_available">true</bool>
 
