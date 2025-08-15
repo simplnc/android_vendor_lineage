@@ -51,4 +51,23 @@
 
     <!-- Surface scheduled power on/off if the device implementation supports it -->
     <bool name="config_show_scheduled_power_on_off">true</bool>
+
+    <!-- Surface Wi‑Fi Calling settings if IMS/VoWiFi is present -->
+    <bool name="config_show_wifi_calling_settings">true</bool>
+
+    <!-- Show Game Dashboard entry if present -->
+    <bool name="config_show_game_dashboard_settings">true</bool>
+
+    <!-- Show Thermal profiles if backed by device service -->
+    <bool name="config_show_thermal_settings">true</bool>
+
+    <!-- Show Battery Health section if available -->
+    <bool name="config_show_battery_health">true</bool>
+
+    <!-- Show Accessibility shortcuts and advanced toggles -->
+    <bool name="config_show_accessibility_shortcut_settings">true</bool>
+
+    <!-- Show Reset options (network/app preferences) entries -->
+    <bool name="config_show_reset_network_settings">true</bool>
+    <bool name="config_show_reset_app_preferences">true</bool>
 </resources>

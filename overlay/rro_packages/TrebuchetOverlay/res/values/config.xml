@@ -19,11 +19,4 @@
     <!-- Default packages -->
     <string name="wallpaper_picker_package" translatable="false">com.android.wallpaper</string>
 
-    <!-- Pre-hidden apps list placeholder for Trebuchet; fill with package names -->
-    <string-array name="config_hidden_apps" translatable="false">
-        <!-- Example entries (leave empty to pre-hide none by default) -->
-        <!-- <item>com.example.app1</item> -->
-        <!-- <item>com.example.app2</item> -->
-    </string-array>
-
 </resources>

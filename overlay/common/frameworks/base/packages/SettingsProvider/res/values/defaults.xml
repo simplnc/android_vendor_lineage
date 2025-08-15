@@ -46,4 +46,30 @@
 
     <!-- Developer options disabled until explicitly enabled -->
     <bool name="def_development_settings_enabled">false</bool>
+
+    <!-- Auto time and time zone from network -->
+    <bool name="def_auto_time">true</bool>
+    <bool name="def_auto_time_zone">true</bool>
+
+    <!-- Radios and rotation defaults -->
+    <bool name="def_bluetooth_on">false</bool>
+    <bool name="def_airplane_mode_on">false</bool>
+    <bool name="def_auto_rotate">true</bool>
+
+    <!-- Roaming and data usage defaults -->
+    <bool name="def_data_roaming">false</bool>
+
+    <!-- UX feedback defaults -->
+    <bool name="def_sound_effects_enabled">true</bool>
+    <bool name="def_haptic_feedback">true</bool>
+    <bool name="def_lockscreen_sounds_enabled">false</bool>
+
+    <!-- Screen timeout default (ms) -->
+    <integer name="def_screen_off_timeout">30000</integer>
+
+    <!-- Radios that remain toggleable in airplane mode (comma-separated) -->
+    <string name="def_airplane_mode_toggleable_radios" translatable="false">bluetooth,wifi,nfc</string>
+
+    <!-- Vibration on ring default -->
+    <bool name="def_vibrate_when_ringing">false</bool>
 </resources>
