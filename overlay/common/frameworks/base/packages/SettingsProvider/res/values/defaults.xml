@@ -37,4 +37,13 @@
     <string name="def_captive_portal_http_url" translatable="false">http://connectivitycheck.android.com/generate_204</string>
     <string name="def_captive_portal_https_url" translatable="false">https://connectivitycheck.android.com/generate_204</string>
     <string name="def_captive_portal_fallback_url" translatable="false">https://connectivitycheck.android.com/generate_204</string>
+
+    <!-- IPv6 privacy extensions preferred (randomized temporary addresses) -->
+    <bool name="def_ipv6_privacy_extensions">true</bool>
+
+    <!-- Disallow installing apps from unknown sources by default -->
+    <bool name="def_install_non_market_apps">false</bool>
+
+    <!-- Developer options disabled until explicitly enabled -->
+    <bool name="def_development_settings_enabled">false</bool>
 </resources>

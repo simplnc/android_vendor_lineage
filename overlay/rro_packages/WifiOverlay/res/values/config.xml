@@ -6,4 +6,7 @@
     <!-- Indicate that Wi‑Fi per-connection MAC randomization is supported -->
     <bool name="config_wifi_connected_mac_randomization_supported">true</bool>
     <bool name="config_wifi_p2p_mac_randomization_supported">true</bool>
+
+    <!-- Prefer not auto-joining open networks unless user explicitly opts in (if supported) -->
+    <bool name="config_wifiAvoidBadWifi">true</bool>
 </resources>
