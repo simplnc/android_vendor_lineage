@@ -33,6 +33,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 TARGET_SYSTEM_PROP += \
     vendor/lineage/SystemDefaults/defaults_common.prop
 
+# Enable one-handed mode support globally
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.support_one_handed_mode?=true
+
 
 # Applications for product
 # Wallpapers
