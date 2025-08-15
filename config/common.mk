@@ -40,6 +40,13 @@ $(call inherit-product-if-exists, packages/apps/WallpaperPicker2/Android.mk)
 $(call inherit-product-if-exists, packages/apps/Evolver/evolver.mk)
 $(call inherit-product-if-exists, packages/apps/Extensions/extensions.mk)
 
+# Optional vendor add-ons and extended ROM configs (pulled only if present)
+$(call inherit-product-if-exists, vendor/addons/config.mk)
+$(call inherit-product-if-exists, vendor/extendedrom/config.mk)
+$(call inherit-product-if-exists, vendor/statix/config.mk)
+$(call inherit-product-if-exists, vendor/stx/config.mk)
+$(call inherit-product-if-exists, vendor/stx_extended/config.mk)
+
 # Allow vendor prebuilt repos to exclude themselves from bp scanning
 -include $(sort $(wildcard vendor/*/*/exclude-bp.mk))
 
