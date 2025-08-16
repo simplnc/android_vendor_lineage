@@ -121,3 +121,17 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.vendor.qti.core_ctl_boost_duration=5000 \
     ro.vendor.qti.core_ctl_boost_freq=0:1804800,1:1804800,2:1804800,3:1804800,4:1804800,5:1804800,6:1804800,7:1804800
 
+# --- Secure defaults additions ---
+# Disable ADB over network by default (can still be enabled via developer options)
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    service.adb.tcp.port=-1
+
+# Enforce secure USB settings when locked (framework respects policy)
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    persist.sys.usb.restricted=true
+
+# Keep OEM unlocking disabled by default (user can explicitly enable in Developer options)
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.oem_unlock_supported=1 \
+    persist.sys.oem_unlock_allowed=0
+

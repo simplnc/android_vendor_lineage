@@ -39,4 +39,42 @@
 
     <!-- Whether memory from app_info_settings is available or not. -->
     <bool name="config_show_app_info_settings_memory">true</bool>
+
+    <!-- Show app hibernation settings section if supported -->
+    <bool name="config_show_app_hibernation_settings">true</bool>
+
+    <!-- Show per-app language settings entry if supported -->
+    <bool name="config_per_app_language_enabled">true</bool>
+
+    <!-- Show emergency gesture settings if available -->
+    <bool name="config_show_emergency_gesture_settings">true</bool>
+
+    <!-- Surface scheduled power on/off if the device implementation supports it -->
+    <bool name="config_show_scheduled_power_on_off">true</bool>
+
+    <!-- Surface Wi‑Fi Calling settings if IMS/VoWiFi is present -->
+    <bool name="config_show_wifi_calling_settings">true</bool>
+
+    <!-- Show Game Dashboard entry if present -->
+    <bool name="config_show_game_dashboard_settings">true</bool>
+
+    <!-- Show Thermal profiles if backed by device service -->
+    <bool name="config_show_thermal_settings">true</bool>
+
+    <!-- Show Battery Health section if available -->
+    <bool name="config_show_battery_health">true</bool>
+
+    <!-- Show Accessibility shortcuts and advanced toggles -->
+    <bool name="config_show_accessibility_shortcut_settings">true</bool>
+
+    <!-- Accessibility: surface magnification, color correction, inversion, hearing aids -->
+    <bool name="config_show_accessibility_magnification">true</bool>
+    <bool name="config_show_accessibility_color_correction">true</bool>
+    <bool name="config_show_accessibility_color_inversion">true</bool>
+    <bool name="config_show_accessibility_hearing_aids">true</bool>
+    <bool name="config_show_accessibility_vibration">true</bool>
+
+    <!-- Show Reset options (network/app preferences) entries -->
+    <bool name="config_show_reset_network_settings">true</bool>
+    <bool name="config_show_reset_app_preferences">true</bool>
 </resources>
