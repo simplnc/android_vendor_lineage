@@ -18,9 +18,9 @@ $(call inherit-product, vendor/lineage/SystemDefaults/optimisation.mk)
 # MicroG services for Google Play Services alternative
 # $(call inherit-product-if-exists, vendor/MICROG/microg.mk)
 # Vendor extras
-# $(call inherit-product-if-exists, vendor/custom/config.mk)
+$(call inherit-product-if-exists, vendor/custom/config.mk)
 # Audio enhancement - ViPER4AndroidFX
-# $(call inherit-product-if-exists, packages/apps/ViPER4AndroidFX/config.mk)
+$(call inherit-product-if-exists, packages/apps/ViPER4AndroidFX/config.mk)
 # Vendor Prebuilt system applications
 # $(call inherit-product-if-exists, vendor/prebuilt/config.mk)
 # Vendor Configarations
@@ -144,6 +144,7 @@ ifneq ($(TARGET_DISABLE_EPPE),true)
 $(call enforce-product-packages-exist-internal,$(wildcard device/*/$(LINEAGE_BUILD)/$(TARGET_PRODUCT).mk),product_manifest.xml rild Calendar Launcher3 Launcher3Go Launcher3QuickStep Launcher3QuickStepGo android.hidl.memory@1.0-impl.vendor vndk_apex_snapshot_package)
 endif
 
+# Additional applications
 # Bootanimation
 TARGET_SCREEN_WIDTH ?= 1080
 TARGET_SCREEN_HEIGHT ?= 1920
@@ -261,8 +262,7 @@ PRODUCT_PACKAGE_OVERLAYS += \
 PRODUCT_PACKAGES += \
     DocumentsUIOverlay \
     NetworkStackOverlay \
-    PermissionControllerOverlay \
-    WifiOverlay
+    PermissionControllerOverlay 
 
 # Translations
 CUSTOM_LOCALES += \
@@ -270,6 +270,11 @@ CUSTOM_LOCALES += \
     gd_GB \
     cy_GB \
     fur_IT
+
+# LMOFreeform 
+PRODUCT_PACKAGES += \
+    LMOFreeform \
+    LMOFreeformSidebar 
 
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/crowdin/overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/crowdin/overlay
