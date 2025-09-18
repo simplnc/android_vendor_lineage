@@ -45,3 +45,7 @@ TARGET_SYSTEM_PROP += \
     
 
 
+# UI
+PRODUCT_PACKAGES += \
+FadingEdgelayout
+    
