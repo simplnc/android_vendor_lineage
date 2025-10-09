@@ -149,11 +149,8 @@ endif
 TARGET_SCREEN_WIDTH ?= 1080
 TARGET_SCREEN_HEIGHT ?= 1920
 PRODUCT_PACKAGES += \
-    bootanimation.zip
-
-# Build Manifest
-PRODUCT_PACKAGES += \
-    build-manifest
+    bootanimation.zip \
+    bootanimation-dark.zip
 
 # Lineage packages
 ifeq ($(PRODUCT_IS_AUTOMOTIVE),)

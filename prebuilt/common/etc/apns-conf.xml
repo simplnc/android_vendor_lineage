@@ -117,6 +117,7 @@
   <apn carrier="Mobile Vikings MMS" mcc="206" mnc="20" apn="mms.be" proxy="" port="" user="mms" password="mms" mmsc="http://mmsc.be" mmsproxy="217.72.235.1" mmsport="8080" authtype="1" type="mms" />
   <apn carrier="JIM Mobile Internet" mcc="206" mnc="20" apn="gprs.base.be" proxy="" port="" user="base" password="base" mmsc="" authtype="1" type="default,supl" />
   <apn carrier="JIM Mobile MMS" mcc="206" mnc="20" apn="mms.base.be" proxy="" port="" user="base" password="base" mmsc="http://mmsc.base.be" mmsproxy="217.72.235.1" mmsport="8080" authtype="1" type="mms" />
+  <apn carrier="BICS Internet" carrier_id="2132" mcc="206" mnc="28" apn="bicsapn" type="default,ia,supl" />
   <apn carrier="Orange Internet" mcc="208" mnc="01" apn="orange.fr" proxy="" port="" user="orange" password="orange" mmsc="" type="default,supl,dun" />
   <apn carrier="Orange MMS" mcc="208" mnc="01" apn="orange.acte" proxy="" port="" mmsproxy="192.168.010.200" mmsport="8080" mmsc="http://mms.orange.fr" user="orange" password="orange" type="mms" />
   <apn carrier="Orange World" mcc="208" mnc="01" apn="orange" user="orange" password="orange" authtype="2" type="default,supl" />
@@ -1168,6 +1169,7 @@
   <apn carrier="T-Mobile MK MMS" mcc="294" mnc="01" apn="mms" proxy="" port="" user="mms" password="mms" mmsc="http://mms.t-mobile.com.mk" mmsproxy="62.162.155.227" mmsport="8080" authtype="3" type="mms" />
   <apn carrier="Vip internet" mcc="294" mnc="03" apn="vipoperator" proxy="78.40.0.1" port="8080" mmsc="" user="vipoperator" password="vipoperator" type="default,supl" />
   <apn carrier="Vip mms" mcc="294" mnc="03" apn="vipoperator.mms" proxy="" port="" mmsproxy="78.40.0.1" mmsport="8080" mmsc="http://mmsc.vipoperator.com.mk" user="" password="" type="mms" />
+  <apn carrier="BICS" carrier_id="2232" mcc="295" mnc="09" apn="bicsapn" mvno_match_data="BICS" mvno_type="spn" type="default,ia" />
   <apn carrier="Telenor MNE internet" mcc="297" mnc="01" apn="internet" proxy="192.168.246.005" port="8080" mmsc="" user="gprs" password="gprs" type="default,supl" />
   <apn carrier="Telenor MNE mms" mcc="297" mnc="01" apn="mms" proxy="" port="" mmsproxy="192.168.246.005" mmsport="8080" mmsc="http://mm.vor.telenor.me" user="mms" password="mms" type="mms" />
   <apn carrier="ProMonte" mcc="297" mnc="01" apn="gprs.promonte.com" proxy="" port="" user="gprs" password="gprs" mmsc="" type="default,supl" />
@@ -3534,6 +3536,8 @@
   <apn carrier="Nedjma" mcc="603" mnc="03" apn="internet" user="nedjma" password="nedjma" type="default,supl" />
   <apn carrier="Nedjma MMS" mcc="603" mnc="03" apn="nedjmaMMS" user="mms" password="mms" mmsc="http://10.10.111.1" mmsproxy="192.168.52.3" mmsport="9201" type="mms" />
   <apn carrier="Imédia" mcc="604" mnc="00" apn="wap.meditel.ma" proxy="10.8.8.8" port="8080" user="MEDIWAP" password="MEDIWAP" authtype="1" type="default,supl" />
+  <apn carrier="Inwi" mcc="604" mnc="02" apn="www.inwi.ma" type="default,supl,hipri,dun,fota,cbs" />
+  <apn carrier="Inwi MMS" mcc="604" mnc="02" apn="mms.wana.ma" proxy="" port="" user="" password="" authtype="0" mmsc="http://mms.wana.ma:38090" mmsproxy="10.86.0.10" mmsport="8080" type="mms" />
   <apn carrier="Meditel Internet" mcc="604" mnc="00" apn="internet1.meditel.ma" user="MEDINET" password="MEDINET" authtype="1" type="default,supl" />
   <apn carrier="Meditel MMS" mcc="604" mnc="00" apn="mms.meditel.ma" user="MEDIMMS" password="MEDIMMS" mmsc="http://mms.meditel.ma:8088/mms" mmsproxy="10.8.8.9" mmsport="8080" authtype="1" type="mms" />
   <apn carrier="Mobile Zone" mcc="604" mnc="01" apn="wap.iamgprs.ma" proxy="212.217.54.133" port="8080" mmsc="" authtype="1" user="" password="" type="default,supl" />
@@ -3972,4 +3976,5 @@
   <apn carrier="Claro MMS" mcc="748" mnc="10" apn="mms.ctimovil.com.uy" proxy="" port="" mmsc="http://mms.ctimovil.com.uy" user="" password="" type="mms" />
   <apn carrier="Claro UY" mcc="748" mnc="10" apn="gprs.claro.com.uy" user="ctigpr" password="ctigpr999" type="default,supl" />
   <apn carrier="Claro UY MMS" mcc="748" mnc="10" apn="mms.ctimovil.com.uy" user="ctimms" password="ctimms999" mmsc="http://mms.ctimovil.com.uy" mmsproxy="170.051.255.240" mmsport="9201" type="mms" />
+  <apn carrier="BICS Internet" carrier_id="2132" mcc="901" mnc="58" apn="bicsapn" type="default,ia,supl" />
 </apns>
