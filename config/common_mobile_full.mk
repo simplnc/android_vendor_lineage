@@ -26,7 +26,25 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fonts_customization.xml \
     FontLatoOverlay \
-    FontRubikOverlay
+    FontRubikOverlay \
+    FontOnePlusSansOverlay \
+    FontGoogleSansOverlay \
+    FontInterOverlay \
+    FontPoppinsOverlay \
+    FontRobotoCondensedOverlay \
+    FontSourceSansOverlay \
+    FontUbuntuOverlay \
+    FontMontserratOverlay \
+    FontOpenSansOverlay \
+    FontRalewayOverlay
+
+# Icon Packs
+PRODUCT_PACKAGES += \
+    IconPackPixelOverlay \
+    IconPackMaterialYouOverlay \
+    IconPackOneUIOverlay \
+    IconPackiOSOverlay \
+    IconPackFluidOverlay
 
 # Include Lineage LatinIME dictionaries
 PRODUCT_PACKAGE_OVERLAYS += vendor/lineage/overlay/dictionaries

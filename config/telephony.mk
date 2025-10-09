@@ -17,7 +17,7 @@ PRODUCT_PACKAGES += \
 
 # Default ringtone
 PRODUCT_PRODUCT_PROPERTIES += \
-    ro.config.ringtone=Orion.ogg
+    ro.config.ringtone=24_DextaDapsWifi.ogg
 
 # Tethering - allow without requiring a provisioning app
 # (for devices that check this)

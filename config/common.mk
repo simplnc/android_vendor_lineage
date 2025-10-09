@@ -20,7 +20,7 @@ $(call inherit-product, vendor/lineage/SystemDefaults/optimisation.mk)
 # Vendor extras
 $(call inherit-product-if-exists, vendor/custom/config.mk)
 # Audio enhancement - ViPER4AndroidFX
-$(call inherit-product-if-exists, packages/apps/ViPER4AndroidFX/config.mk)
+# $(call inherit-product-if-exists, packages/apps/ViPER4AndroidFX/config.mk)
 # Vendor Prebuilt system applications
 # $(call inherit-product-if-exists, vendor/prebuilt/config.mk)
 # Vendor Configarations
@@ -274,7 +274,10 @@ CUSTOM_LOCALES += \
 # LMOFreeform 
 PRODUCT_PACKAGES += \
     LMOFreeform \
-    LMOFreeformSidebar 
+    LMOFreeformSidebar \
+    Widget 
+
+
 
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/crowdin/overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/crowdin/overlay

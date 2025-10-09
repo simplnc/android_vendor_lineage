@@ -45,7 +45,7 @@
     <bool name="def_install_non_market_apps">false</bool>
 
     <!-- Developer options disabled until explicitly enabled -->
-    <bool name="def_development_settings_enabled">false</bool>
+    <bool name="def_development_settings_enabled">true</bool>
 
     <!-- Auto time and time zone from network -->
     <bool name="def_auto_time">true</bool>
@@ -72,4 +72,7 @@
 
     <!-- Vibration on ring default -->
     <bool name="def_vibrate_when_ringing">false</bool>
+
+    <!-- Default hidden apps list (comma-separated package names) -->
+    <string name="def_hide_applist" translatable="false">com.asdoi.quicktiles,com.truemlgpro.wifiinfo,com.fibelatti.photowidget,com.drnoob.datamonitor,dualwall,com.android.webview,com.bitmavrik.lumolight,org.breezyweather,com.android.documentsui,com.kin.athena,com.devrinth.launchpad,com.kaleedtc.privacium,com.shezik.drawanywhere,com.stario.launcher,image.toolbox,native.alpha,nethical.digipaws,nethical.locklock,com.android.messaging,com.android.webview_shell,org.chromium.webview_shell,com.cylonid.nativealpha,com.demizo.daily_you,ru.tech.imageresizershrinker,com.sourajitk.ambient.ambient_music</string>
 </resources>
