@@ -12,6 +12,8 @@ $(call inherit-product, vendor/lineage/SystemDefaults/defaults_common.mk)
 # System optimization settings
 $(call inherit-product, vendor/lineage/SystemDefaults/optimisation.mk)
 
+# Allow vendor/extra to override any property by setting it first
+$(call inherit-product, vendor/microg/vendor_microg.mk)
 # ============================================================================
 # OPTIONAL FEATURES (COMMENTED OUT)
 # ============================================================================
