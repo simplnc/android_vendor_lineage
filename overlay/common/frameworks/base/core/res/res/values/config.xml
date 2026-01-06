@@ -72,7 +72,7 @@
     <bool name="config_enableMultiUserUI">true</bool>
 
     <!--  Maximum number of supported users -->
-    <integer name="config_multiuserMaximumUsers">4</integer>
+    <integer name="config_multiuserMaximumUsers">2</integer>
 
    <!-- Set icon mask to circle -->
    <string name="config_icon_mask" translatable="false">"M50 0A50 50,0,1,1,50 100A50 50,0,1,1,50 0"</string>
@@ -111,6 +111,15 @@
         <item>im.vector.app</item>
         <item>cx.ring</item>
         <item>org.briarproject.briar.android</item>
+        <item>org.fossify.messages</item>
+        <item>chat.delta</item> <!-- Delta Chat -->
+        <item>org.mollyproject.mollyim</item> <!-- Molly (Signal fork) -->
+        <item>network.loki.messenger</item> <!-- Session -->
+        <item>com.wire</item> <!-- Wire -->
+        <item>com.Slack</item> <!-- Slack -->
+        <item>com.mattermost.rn</item> <!-- Mattermost -->
+        <item>com.moez.QKSMS</item> <!-- QKSMS -->
+        <item>org.smssecure.smssecure</item> <!-- Silence -->    
     </string-array>
 
     <!-- Flag indicating which package name can access DeviceConfig table -->
@@ -171,4 +180,7 @@
 
     <!-- Name of the font family to use in the default lockscreen clock -->
     <string name="config_clockFontFamily" translatable="false" />
+    
+    <!-- The amount to scale fullscreen snapshots for Overview and snapshot starting windows. -->
+    <item name="config_highResTaskSnapshotScale" format="float" type="dimen">0.8</item>
 </resources>

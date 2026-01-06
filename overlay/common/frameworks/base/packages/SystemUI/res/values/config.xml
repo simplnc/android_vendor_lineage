@@ -40,4 +40,18 @@
 
     <!-- Whether or not lockscreen shortcuts can be customized -->
     <bool name="custom_lockscreen_shortcuts_enabled" translatable="false">true</bool>
+
+    <!-- Recommend additional quick settings tiles in the picker (non-breaking) -->
+    <string-array name="config_quickSettingsAdditionalTiles" translatable="false">
+        <item>controls</item>
+        <item>device_controls</item>
+        <item>mic_toggle</item>
+        <item>camera_toggle</item>
+        <item>invert</item>
+        <item>battery_saver</item>
+        <item>data_saver</item>
+        <item>hotspot</item>
+        <item>reduce_brightness</item>
+        <item>extra_dim</item>
+    </string-array>
 </resources>

@@ -29,4 +29,50 @@
 
     <!-- This is disabled by default, but turned on in SetupWizard -->
     <bool name="assisted_gps_enabled">false</bool>
+
+    <!-- Default Private DNS mode: opportunistic (keeps connectivity while trying DoT) -->
+    <string name="def_private_dns_mode" translatable="false">opportunistic</string>
+
+    <!-- Use HTTPS for captive portal detection and a neutral hostname -->
+    <string name="def_captive_portal_http_url" translatable="false">http://connectivitycheck.android.com/generate_204</string>
+    <string name="def_captive_portal_https_url" translatable="false">https://connectivitycheck.android.com/generate_204</string>
+    <string name="def_captive_portal_fallback_url" translatable="false">https://connectivitycheck.android.com/generate_204</string>
+
+    <!-- IPv6 privacy extensions preferred (randomized temporary addresses) -->
+    <bool name="def_ipv6_privacy_extensions">true</bool>
+
+    <!-- Disallow installing apps from unknown sources by default -->
+    <bool name="def_install_non_market_apps">false</bool>
+
+    <!-- Developer options disabled until explicitly enabled -->
+    <bool name="def_development_settings_enabled">true</bool>
+
+    <!-- Auto time and time zone from network -->
+    <bool name="def_auto_time">true</bool>
+    <bool name="def_auto_time_zone">true</bool>
+
+    <!-- Radios and rotation defaults -->
+    <bool name="def_bluetooth_on">false</bool>
+    <bool name="def_airplane_mode_on">false</bool>
+    <bool name="def_auto_rotate">true</bool>
+
+    <!-- Roaming and data usage defaults -->
+    <bool name="def_data_roaming">false</bool>
+
+    <!-- UX feedback defaults -->
+    <bool name="def_sound_effects_enabled">true</bool>
+    <bool name="def_haptic_feedback">true</bool>
+    <bool name="def_lockscreen_sounds_enabled">false</bool>
+
+    <!-- Screen timeout default (ms) -->
+    <integer name="def_screen_off_timeout">30000</integer>
+
+    <!-- Radios that remain toggleable in airplane mode (comma-separated) -->
+    <string name="def_airplane_mode_toggleable_radios" translatable="false">bluetooth,wifi,nfc</string>
+
+    <!-- Vibration on ring default -->
+    <bool name="def_vibrate_when_ringing">false</bool>
+
+    <!-- Default hidden apps list (comma-separated package names) -->
+    <string name="def_hide_applist" translatable="false">com.asdoi.quicktiles,com.truemlgpro.wifiinfo,com.fibelatti.photowidget,com.drnoob.datamonitor,dualwall,com.android.webview,com.bitmavrik.lumolight,org.breezyweather,com.android.documentsui,com.kin.athena,com.devrinth.launchpad,com.kaleedtc.privacium,com.shezik.drawanywhere,com.stario.launcher,image.toolbox,native.alpha,nethical.digipaws,nethical.locklock,com.android.messaging,com.android.webview_shell,org.chromium.webview_shell,com.cylonid.nativealpha,com.demizo.daily_you,ru.tech.imageresizershrinker,com.sourajitk.ambient.ambient_music</string>
 </resources>
