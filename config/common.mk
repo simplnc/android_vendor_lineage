@@ -16,15 +16,19 @@ $(call inherit-product, vendor/lineage/SystemDefaults/optimisation.mk)
 # OPTIONAL FEATURES (COMMENTED OUT)
 # ============================================================================
 # MicroG services for Google Play Services alternative
-# $(call inherit-product-if-exists, vendor/MICROG/microg.mk)
+$(call inherit-product, vendor/microg/microg.mk)
 # Vendor extras
-$(call inherit-product-if-exists, vendor/custom/config.mk)
+# $(call inherit-product,  vendor/custom/config.mk)
 # Audio enhancement - ViPER4AndroidFX
 # $(call inherit-product-if-exists, packages/apps/ViPER4AndroidFX/config.mk)
 # Vendor Prebuilt system applications
 # $(call inherit-product-if-exists, vendor/prebuilt/config.mk)
 # Vendor Configarations
 # $(call inherit-product-if-exists, vendor/configaration/config.mk)
+$(call inherit-product,  vendor/ArouraStore/config.mk)
+$(call inherit-product-if-exists, vendor/bmobile/system/config.mk)
+$(call inherit-product-if-exists, vendor/bmobile/apps/config.mk)
+$(call inherit-product-if-exists, vendor/bmobile/prebuilts/config.mk)
 
 # Allow vendor prebuilt repos to exclude themselves from bp scanning
 -include $(sort $(wildcard vendor/*/*/exclude-bp.mk))
@@ -54,7 +58,7 @@ ifeq ($(TARGET_BUILD_VARIANT),eng)
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.adb.secure=0
 else
 ifdef WITH_ADB_INSECURE
-# Forcebly disable ADB authentication
+# Forcibly disable ADB authentication
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.adb.secure=0
 else
 # Enable ADB authentication
@@ -286,4 +290,4 @@ include vendor/lineage/config/version.mk
 -include vendor/lineage-priv/keys/keys.mk
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
--include vendor/lineage/config/partner_gms.mk
+#-include vendor/lineage/config/partner_gms.mk
